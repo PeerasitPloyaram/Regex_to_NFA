@@ -75,7 +75,6 @@ python3 main.py --out
 
 Recieve: (aub)*aab
 NFA define by:
-NFA Json Name [NFA_(aub)*aab.json] has been save.
  --------------------------------------
 | States |         Transitions         |
 |        |    E    |    a    |    b    |
@@ -111,6 +110,8 @@ NFA Json Name [NFA_(aub)*aab.json] has been save.
 
 Start state is: Q1
 Final states is: Q13
+
+NFA Json Name [NFA_(aub)*aab.json] has been save.
 ```
 
 #### File NFA Json
