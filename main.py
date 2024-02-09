@@ -29,7 +29,8 @@ if __name__ == "__main__":
     filename = "NFA_" +str(regex) + ".json"
     path = path + filename   # Path Filename
 
+    converter.showNfaTable()
+    
     if useJson:
         converter.saveToJson(path)
         print(f"NFA Json Name [{filename}] has been save.")
-    converter.showNfaTable()
