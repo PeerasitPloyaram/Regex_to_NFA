@@ -282,7 +282,7 @@ def showNfaTable()->None:
 
     for state in nfa['states']:
         if len(state) <= 2:                     # IF Q < 10
-            print("|  ", state, "  |",end="")   # state and Transitions
+            print("|  ", state, "  |", end="")   # state and Transitions
             for trans in nfa["transition"]:
                 if state == trans[0]:           # If Round Q State
                     # print(trans)
@@ -291,7 +291,7 @@ def showNfaTable()->None:
 
                     for i in nfa["letters"]:    # Loop fin State Q-
                         if trans[1] == i:
-                            print(f"{space * sequence}{trans[2]},",end="")  # Print State Transitions by sequence Position
+                            print(f"{space * sequence}{trans[2]}",end="")  # Print State Transitions by sequence Position
                         sequence += 11          # Col Margin
         else:                                   # IF Q > 10
             print("|  ",state," |",end="")
@@ -302,12 +302,16 @@ def showNfaTable()->None:
 
                     for i in nfa["letters"]:
                         if trans[1] == i:
-                            print(f"{space * sequence}{trans[2]},",end="") # Print State Transitions by sequence Position
+                            print(f"{space * sequence}{trans[2]}",end="") # Print State Transitions by sequence Position
                         sequence += 11
         # print(f"\n|--------|{lower_state_border * size_col}") # Lower Table Border
         print(f"\n|--------|{lower_col_border * size_col}") # Lower Table Border
 
-
+    print("\nStart state is: {}".format(nfa["start_states"][0]))    # Print Start State
+    print("Final states is: ", end="")                              # Print Final State
+    for state in nfa["final_states"]:
+        print( state, end="")                                       # Print State
+    print("\n")
 
 
 # if __name__ == "__main__":
